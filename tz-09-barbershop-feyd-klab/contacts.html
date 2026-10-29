@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Запись и контакты — Фейд Клаб</title><meta name="description" content="Выберите дату и время, оставьте заявку на стрижку.">
+<meta property="og:title" content="Запись и контакты — Фейд Клаб"><meta property="og:description" content="Выберите дату и время, оставьте заявку на стрижку."><meta property="og:image" content="img/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23141414'/%3E%3Ctext x='6' y='24' font-size='22' fill='%23B8862B'%3EФ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+</head><body><header><a class="logo" href="index.html">ФЕЙД КЛАБ</a><nav><a href="index.html">Главная</a><a href="services.html">Услуги</a><a href="masters.html">Мастера</a><a href="works.html">Работы</a><a href="style-quiz.html">Подбор стрижки</a><a href="contacts.html" class="on" aria-current="page">Запись</a></nav><a class="tel" href="tel:+79009090990" data-event="contact_click" data-contact-type="phone">+7 (900) 909-09-90</a></header>
+<main><h1>Запись</h1><div id="days" class="row"></div><div id="slots" class="row"></div>
+<form id="lead" novalidate data-form-id="lead_form"><label>Имя<input name="name" autocomplete="name"></label><small class="err" data-for="name"></small>
+<label>Телефон<input name="phone" placeholder="+79001234567" inputmode="tel"></label><small class="err" data-for="phone"></small>
+<label>E-mail (по желанию)<input name="email" type="email"></label><small class="err" data-for="email"></small>
+<label>Услуга<select name="service"><option value="haircut">Стрижка</option><option value="beard">Борода</option><option value="combo">Стрижка + борода</option><option value="kids">Детская стрижка</option><option value="father_son">Отец + сын</option><option value="gift_card">Сертификат</option></select></label><label>Уровень мастера<select name="master_level"><option value="any">Любой</option><option value="barber">Барбер</option><option value="top">Топ-барбер</option><option value="brand">Бренд-барбер</option></select></label>
+<input type="hidden" name="slot"><small class="err" data-for="slot"></small>
+<label class="chk"><input type="checkbox" name="consent"> Согласен(на) на <a href="privacy.html">обработку персональных данных</a></label><small class="err" data-for="consent"></small>
+<button class="btn main" type="submit" data-event="cta_click" data-button-name="form_submit" data-page-section="form">Записаться</button></form>
+<h2>Контакты</h2><p><a href="tel:+79009090990" data-event="contact_click" data-contact-type="phone">+7 (900) 909-09-90</a> · <a href="mailto:book@fadeclub.example" data-event="contact_click" data-contact-type="email">book@fadeclub.example</a></p>
+<p><a class="btn" href="https://t.me/" data-event="messenger_click" data-messenger="telegram">Telegram</a> <a class="btn" href="https://wa.me/79009090990" data-event="messenger_click" data-messenger="whatsapp">WhatsApp</a></p>
+<p>г. Новоозёрск, ул. Кузнечная, д. 5 · <a href="https://yandex.ru/maps/?text=Новоозёрск, ул. Кузнечная, 5" data-event="map_open" data-map-service="yandex">Открыть карту</a></p></main>
+<footer><p>ООО «Фейд Клаб» · 614 111, г. Новоозёрск, ул. Кузнечная, д. 5 · ежедневно 10:00–22:00</p>
+<p><a href="#" data-event="social_click" data-network="instagram" data-page-section="footer">Instagram</a> · <a href="#" data-event="social_click" data-network="vk" data-page-section="footer">ВКонтакте</a> · <a href="#" data-event="social_click" data-network="telegram" data-page-section="footer">Telegram</a> · <a href="#" data-event="social_click" data-network="youtube" data-page-section="footer">YouTube</a> · <a href="privacy.html">Политика конфиденциальности</a></p></footer>
+<script src="js/analytics.js"></script><script src="js/form.js"></script></body></html>

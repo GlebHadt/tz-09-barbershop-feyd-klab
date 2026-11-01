@@ -12,7 +12,7 @@
 | Telegram | ___ |
 | YouTube | ___ |
 
-**Идентификатор ресурса GA4:** G-XXXXXXXXXX
+**Идентификатор ресурса GA4:** G-H77TTNTSYH
 **Доступ Viewer к ресурсу GA4 выдан:** ___ (e-mail Заказчика)
 
 ---
@@ -36,7 +36,7 @@ screens/ ga4/ utm/ instagram/ reports/ explore/ datalens/ lighthouse/
 
 ## Запуск и настройка
 
-1. **GA4.** Создать ресурс «ФЕЙД КЛАБ — сайт» (Москва, рубль), веб-поток с адресом Vercel, включить Enhanced measurement с формами. Заменить `G-XXXXXXXXXX` во всех HTML-файлах на свой идентификатор (поиск и замена по папке).
+1. **GA4.** Создать ресурс «ФЕЙД КЛАБ — сайт» (Москва, рубль), веб-поток с адресом Vercel, включить Enhanced measurement с формами. Заменить `G-H77TTNTSYH` во всех HTML-файлах на свой идентификатор (поиск и замена по папке).
 2. **Таблица.** Создать Google Таблицу «FadeClub — Bookings» с листом `leads`. Расширения → Apps Script → вставить `apps-script/Code.gs`, в `SPREADSHEET_ID` указать id таблицы, выполнить `setupSheet()`.
 3. **Приёмник.** Развернуть → Новое развёртывание → Веб-приложение (запуск от моего имени, доступ — все). Скопировать URL `…/exec` в `js/form.js` → `ENDPOINT`.
 4. **Vercel.** Импортировать репозиторий, Framework — Other, без команды сборки. Если адрес отличается от `tz-09-barbershop-feyd-klab.vercel.app`, заменить его в `<link rel="canonical">`/`og:*` и в `docs/utm.csv`, перегенерировать QR.

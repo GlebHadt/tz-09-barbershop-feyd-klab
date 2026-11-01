@@ -10,7 +10,7 @@
 |---|---|
 | Сайт на Vercel | https://tz-09-barbershop-feyd-klab.vercel.app |
 | Репозиторий | https://github.com/GlebHadt/tz-09-barbershop-feyd-klab |
-| Таблица заявок «FadeClub — Bookings» (листы `leads`, `utm`) | https://docs.google.com/spreadsheets/d/192vY4NM72ONFR1dw1VVXOqktPy1bSgq6Hi04JPIQhh4/edit |
+| Таблица заявок «FadeClub — Bookings» (листы `leads`, `utm`) | https://docs.google.com/spreadsheets/d/192vY4NM72ONFR1dw1VVXOqktPy1bSgq6Hi04JPIQhh4/edit?usp=sharing (просмотр по ссылке) |
 | Приёмник заявок (Apps Script, веб-приложение) | https://script.google.com/macros/s/AKfycbwCd5c9u1UlvDHdieAXcrwijytIZp3OKdwBBFWaPLxn3PLh43UUoafIim3o2l67F13i/exec |
 | Отчёт PageSpeed Insights (Lighthouse, мобильный) | https://pagespeed.web.dev/analysis/https-tz-09-barbershop-feyd-klab-vercel-app/o25sdnhhhg?form_factor=mobile&hl=ru |
 | Telegram-канал «Фейд Клаб — барбершоп» | https://t.me/fadeclub_barbershop (посты со ссылками: [U-07](https://t.me/fadeclub_barbershop/4), [U-08](https://t.me/fadeclub_barbershop/5)) |

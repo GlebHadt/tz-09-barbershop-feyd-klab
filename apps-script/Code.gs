@@ -107,6 +107,7 @@ function setupSheet() {
   sheet.setFrozenRows(1);
 
   var rows = sheet.getMaxRows() - 1;
+  var sep = sep_(ss);                                // «;» для русской локали, «,» для английской
   function col(name) { return HEADERS.indexOf(name) + 1; }
   function listRule(values) {
     return SpreadsheetApp.newDataValidation().requireValueInList(values, true).setAllowInvalid(false).build();
@@ -124,13 +125,13 @@ function setupSheet() {
   required.forEach(function (name) {
     var letter = columnLetter_(col(name));
     rules.push(SpreadsheetApp.newConditionalFormatRule()
-      .whenFormulaSatisfied('=AND(COUNTA($A2:$M2)>0,ISBLANK(' + letter + '2))')
+      .whenFormulaSatisfied('=AND(COUNTA($A2:$M2)>0' + sep + 'ISBLANK(' + letter + '2))')
       .setBackground('#f8d7da')
       .setRanges([sheet.getRange(2, col(name), rows)])
       .build());
   });
   rules.push(SpreadsheetApp.newConditionalFormatRule()
-    .whenFormulaSatisfied('=AND($A2<>"",COUNTIF($A:$A,$A2)>1)')
+    .whenFormulaSatisfied('=AND($A2<>""' + sep + 'COUNTIF($A:$A' + sep + '$A2)>1)')
     .setBackground('#ffe08a')
     .setRanges([sheet.getRange(2, 1, rows)])
     .build());
@@ -161,17 +162,24 @@ function setupUtmSheet_(ss) {
   var sheet = ss.getSheetByName('utm') || ss.insertSheet('utm');
   sheet.getRange(1, 1, 1, UTM_HEADERS.length).setValues([UTM_HEADERS]).setFontWeight('bold');
   sheet.setFrozenRows(1);
-  if (sheet.getLastRow() > 1) return;               // реестр уже заполнен — не трогаем
-  sheet.getRange(2, 1, UTM_ROWS.length, 8).setValues(UTM_ROWS);
-  var formulas = UTM_ROWS.map(function (r, i) {
-    var n = i + 2;
-    // страница без якоря + метки + якорь (#gift) в конце, если он есть
-    return ['=CONCATENATE("' + SITE_URL + '", REGEXEXTRACT(H' + n + ', "^[^#]*"), "?utm_source=", D' + n +
-            ', "&utm_medium=", E' + n + ', "&utm_campaign=", F' + n + ', "&utm_content=", G' + n +
-            ', IFERROR(REGEXEXTRACT(H' + n + ', "#.*"), ""))'];
-  });
+  if (sheet.getLastRow() < 2) sheet.getRange(2, 1, UTM_ROWS.length, 8).setValues(UTM_ROWS);
+  var s = sep_(ss);
+  var count = sheet.getLastRow() - 1;
+  var formulas = [];
+  for (var n = 2; n <= count + 1; n++) {
+    // адрес сайта + страница без якоря + метки + якорь (#gift) в конце, если он есть
+    formulas.push(['=CONCATENATE("' + SITE_URL + '"' + s + ' REGEXEXTRACT(H' + n + s + ' "^[^#]*")' + s +
+      ' "?utm_source="' + s + ' D' + n + s + ' "&utm_medium="' + s + ' E' + n + s +
+      ' "&utm_campaign="' + s + ' F' + n + s + ' "&utm_content="' + s + ' G' + n + s +
+      ' IFERROR(REGEXEXTRACT(H' + n + s + ' "#.*")' + s + ' ""))']);
+  }
   sheet.getRange(2, 9, formulas.length, 1).setFormulas(formulas);
   sheet.autoResizeColumns(1, 8);
+}
+
+/** Разделитель аргументов в формулах зависит от локали таблицы. */
+function sep_(ss) {
+  return /^(en|ja|zh|ko|th|he)/.test(ss.getSpreadsheetLocale()) ? ',' : ';';
 }
 
 function columnLetter_(n) {

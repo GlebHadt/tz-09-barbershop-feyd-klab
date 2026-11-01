@@ -1,25 +1,187 @@
-<!DOCTYPE html><html lang="ru"><head>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google tag (gtag.js) — ресурс GA4 «ФЕЙД КЛАБ — сайт» -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    // Для проверки в DebugView: gtag('config', 'G-XXXXXXXXXX', { debug_mode: true }); — перед сдачей убрать.
+  </script>
+  <title>Фейд Клаб — барбершоп в Новоозёрске. Первая стрижка −20 %</title>
+  <meta name="description" content="Мужские стрижки и борода у 8 мастеров. Онлайн-запись на свободное время, первая стрижка −20 %, подарочные сертификаты. Ежедневно 10:00–22:00.">
+  <link rel="canonical" href="https://tz-09-barbershop-feyd-klab.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Фейд Клаб">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://tz-09-barbershop-feyd-klab.vercel.app/">
+  <meta property="og:title" content="Фейд Клаб — барбершоп в Новоозёрске. Первая стрижка −20 %">
+  <meta property="og:description" content="Мужские стрижки и борода у 8 мастеров. Онлайн-запись на свободное время, первая стрижка −20 %, подарочные сертификаты. Ежедневно 10:00–22:00.">
+  <meta property="og:image" content="https://tz-09-barbershop-feyd-klab.vercel.app/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="theme-color" content="#141414">
+  <link rel="icon" href="img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/analytics.js" defer></script>
+  <script src="js/main.js" defer></script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H77TTNTSYH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Фейд Клаб — на главную"><svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="12" cy="30" r="5.5" fill="none" stroke="currentColor" stroke-width="2.6"/><circle cx="28" cy="30" r="5.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15.5 26 31 5M24.5 26 9 5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><span class="logo__text">ФЕЙД КЛАБ<small>барбершоп</small></span></a>
+    <nav class="nav" id="nav" aria-label="Основное меню">
+      <ul><li><a href="index.html" aria-current="page" class="is-active">Главная</a></li><li><a href="services.html">Услуги</a></li><li><a href="masters.html">Мастера</a></li><li><a href="works.html">Работы</a></li><li><a href="style-quiz.html">Подбор стрижки</a></li><li><a href="contacts.html">Контакты</a></li></ul>
+    </nav>
+    <a class="header__phone" href="tel:+79009090990" data-event="contact_click" data-contact-type="phone">+7 (900) 909-09-90</a>
+    <a class="btn btn--small header__cta" href="contacts.html#booking" data-event="cta_click" data-button-name="header_book" data-page-section="header">Записаться</a>
+    <button class="burger" type="button" aria-controls="nav" aria-expanded="false" aria-label="Открыть меню"><span></span></button>
+  </div>
+</header>
+<main id="main">
 
-  gtag('config', 'G-H77TTNTSYH');
-</script>
+<section class="hero">
+  <img class="hero__bg" src="img/hero.webp" width="1600" height="900" alt="" fetchpriority="high">
+  <div class="container hero__inner">
+    <p class="eyebrow">Барбершоп в Новоозёрске · с 2023 года</p>
+    <h1 class="hero__title">Первая стрижка <span class="accent">−20&nbsp;%</span></h1>
+    <p class="hero__lead">Выберите мастера и свободное время онлайн — без ожидания ответа в переписке. 8 мастеров, ежедневно 10:00–22:00.</p>
+    <div class="hero__actions">
+      <a class="btn" href="contacts.html#booking" data-event="cta_click" data-button-name="hero_first_visit" data-page-section="hero">Записаться</a>
+      <a class="btn btn--ghost" href="style-quiz.html" data-event="cta_click" data-button-name="hero_quiz" data-page-section="hero">Подобрать стрижку</a>
+    </div>
+    <p class="hero__note">Скидка действует с 1 ноября 2026 года для новых клиентов. Промокод <b>FIRST20</b>.</p>
+  </div>
+</section>
 
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Главная — Фейд Клаб</title><meta name="description" content="Барбершоп «Фейд Клаб»: первая стрижка −20 %, запись онлайн.">
-<meta property="og:title" content="Главная — Фейд Клаб"><meta property="og:description" content="Барбершоп «Фейд Клаб»: первая стрижка −20 %, запись онлайн."><meta property="og:image" content="img/og.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23141414'/%3E%3Ctext x='6' y='24' font-size='22' fill='%23B8862B'%3EФ%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
-</head><body><header><a class="logo" href="index.html">ФЕЙД КЛАБ</a><nav><a href="index.html" class="on" aria-current="page">Главная</a><a href="services.html">Услуги</a><a href="masters.html">Мастера</a><a href="works.html">Работы</a><a href="style-quiz.html">Подбор стрижки</a><a href="contacts.html">Запись</a></nav><a class="tel" href="tel:+79009090990" data-event="contact_click" data-contact-type="phone">+7 (900) 909-09-90</a></header>
-<main><section class="hero"><h1>Первая стрижка −20 %</h1><p>Барбершоп «Фейд Клаб». Ежедневно 10:00–22:00, запись по слотам.</p><a class="btn main" href="contacts.html" data-event="cta_click" data-button-name="hero_trial" data-page-section="hero">Записаться</a></section><section><h2>Услуги</h2><div class="grid"><article class="card" data-event="service_view" data-service-name="haircut" tabindex="0"><h3>Стрижка</h3><p>1 600 / 2 000 / 2 600 ₽</p></article><article class="card" data-event="service_view" data-service-name="beard" tabindex="0"><h3>Моделирование бороды</h3><p>1 000 ₽</p></article><article class="card" data-event="service_view" data-service-name="combo" tabindex="0"><h3>Стрижка + борода (90 мин)</h3><p>2 400 / 2 900 / 3 500 ₽</p></article><article class="card" data-event="service_view" data-service-name="kids" tabindex="0"><h3>Детская стрижка (до 12 лет)</h3><p>1 200 ₽</p></article><article class="card" data-event="service_view" data-service-name="father_son" tabindex="0"><h3>«Отец + сын»</h3><p>2 500 ₽</p></article><article class="card" data-event="service_view" data-service-name="camo" tabindex="0"><h3>Камуфляж седины</h3><p>1 300 ₽</p></article></div></section><section><h2>Мастера</h2><div class="grid"><article class="card master" data-event="master_view" data-master-level="barber" data-master-id="m1"><h3>Барбер</h3><a class="btn" href="contacts.html?level=barber" data-event="cta_click" data-button-name="master_1" data-page-section="masters">Записаться к мастеру</a></article><article class="card master" data-event="master_view" data-master-level="barber" data-master-id="m2"><h3>Барбер</h3><a class="btn" href="contacts.html?level=barber" data-event="cta_click" data-button-name="master_2" data-page-section="masters">Записаться к мастеру</a></article><article class="card master" data-event="master_view" data-master-level="top" data-master-id="m3"><h3>Топ-барбер</h3><a class="btn" href="contacts.html?level=top" data-event="cta_click" data-button-name="master_3" data-page-section="masters">Записаться к мастеру</a></article><article class="card master" data-event="master_view" data-master-level="brand" data-master-id="m4"><h3>Бренд-барбер</h3><a class="btn" href="contacts.html?level=brand" data-event="cta_click" data-button-name="master_4" data-page-section="masters">Записаться к мастеру</a></article></div></section><section><h2>Работы</h2><div class="grid"><figure class="work" data-type="fade"><div class="ph" role="img" aria-label="Работа 1: Фейд"></div><figcaption>Фейд № 1</figcaption></figure><figure class="work" data-type="crop"><div class="ph" role="img" aria-label="Работа 2: Кроп"></div><figcaption>Кроп № 2</figcaption></figure><figure class="work" data-type="classic"><div class="ph" role="img" aria-label="Работа 3: Классика"></div><figcaption>Классика № 3</figcaption></figure><figure class="work" data-type="beard"><div class="ph" role="img" aria-label="Работа 4: Борода"></div><figcaption>Борода № 4</figcaption></figure><figure class="work" data-type="fade"><div class="ph" role="img" aria-label="Работа 5: Фейд"></div><figcaption>Фейд № 5</figcaption></figure></div><p><a href="works.html">Все работы</a></p></section><section><h2>Подарочный сертификат</h2><p>Действует 6 месяцев.</p><div class="row"><button class="btn" data-event="gift_card_click" data-gift-amount="2000">2 000 ₽</button><button class="btn" data-event="gift_card_click" data-gift-amount="3000">3 000 ₽</button><button class="btn" data-event="gift_card_click" data-gift-amount="5000">5 000 ₽</button></div></section></main>
-<footer><p>ООО «Фейд Клаб» · 614 111, г. Новоозёрск, ул. Кузнечная, д. 5 · ежедневно 10:00–22:00</p>
-<p><a href="#" data-event="social_click" data-network="instagram" data-page-section="footer">Instagram</a> · <a href="#" data-event="social_click" data-network="vk" data-page-section="footer">ВКонтакте</a> · <a href="#" data-event="social_click" data-network="telegram" data-page-section="footer">Telegram</a> · <a href="#" data-event="social_click" data-network="youtube" data-page-section="footer">YouTube</a> · <a href="privacy.html">Политика конфиденциальности</a></p></footer>
-<script src="js/analytics.js"></script><script src="js/form.js"></script></body></html>
+<section class="section" id="services">
+  <div class="container">
+    <div class="section__head"><h2>Услуги</h2><a class="link-more" href="services.html">Все цены</a></div>
+    <ul class="grid grid--3"><li class="card service" data-event="service_view" data-service-name="haircut" tabindex="0">
+          <h3 class="card__title">Стрижка</h3>
+          <p class="card__text">Любая мужская стрижка: фейд, кроп, андеркат, классика. 60 минут.</p>
+          <ul class="prices"><li><span>Барбер</span><b>1 600 ₽</b></li><li><span>Топ-барбер</span><b>2 000 ₽</b></li><li><span>Бренд-барбер</span><b>2 600 ₽</b></li></ul>
+        </li>
+<li class="card service" data-event="service_view" data-service-name="beard" tabindex="0">
+          <h3 class="card__title">Моделирование бороды</h3>
+          <p class="card__text">Форма, контур и уход за бородой. 60 минут.</p>
+          <ul class="prices"><li><span>Любой мастер</span><b>1 000 ₽</b></li></ul>
+        </li>
+<li class="card service" data-event="service_view" data-service-name="combo" tabindex="0">
+          <h3 class="card__title">Стрижка + борода</h3>
+          <p class="card__text">Стрижка и борода за один визит. 90 минут.</p>
+          <ul class="prices"><li><span>Барбер</span><b>2 400 ₽</b></li><li><span>Топ-барбер</span><b>2 900 ₽</b></li><li><span>Бренд-барбер</span><b>3 500 ₽</b></li></ul>
+        </li>
+<li class="card service" data-event="service_view" data-service-name="kids" tabindex="0">
+          <h3 class="card__title">Детская стрижка</h3>
+          <p class="card__text">Для детей до 12 лет. 60 минут.</p>
+          <ul class="prices"><li><span>Любой мастер</span><b>1 200 ₽</b></li></ul>
+        </li>
+<li class="card service" data-event="service_view" data-service-name="father_son" tabindex="0">
+          <h3 class="card__title">«Отец + сын»</h3>
+          <p class="card__text">Стрижка для папы и сына в одно время.</p>
+          <ul class="prices"><li><span>Любой мастер</span><b>2 500 ₽</b></li></ul>
+        </li>
+<li class="card service" data-event="service_view" data-service-name="grey" tabindex="0">
+          <h3 class="card__title">Камуфляж седины</h3>
+          <p class="card__text">Тонирование седины в натуральный оттенок.</p>
+          <ul class="prices"><li><span>Любой мастер</span><b>1 300 ₽</b></li></ul>
+        </li></ul>
+  </div>
+</section>
+
+<section class="section section--dark" id="masters">
+  <div class="container">
+    <div class="section__head"><h2>Мастера</h2><a class="link-more" href="masters.html">Все мастера</a></div>
+    <p class="section__lead">Три уровня: барбер, топ-барбер и бренд-барбер. Цена зависит от уровня мастера.</p>
+    <ul class="grid grid--4"><li class="card master" data-level="brand" data-event="master_view" data-master-level="brand" data-master-id="m1" tabindex="0">
+          <img src="img/master-1.webp" width="600" height="750" loading="lazy" alt="Мастер Глеб Орлов, бренд-барбер">
+          <div class="master__body">
+            <span class="badge badge--brand">Бренд-барбер</span>
+            <h3 class="card__title">Глеб Орлов</h3>
+            <p class="card__text">Стаж 11 лет. Скин-фейды и сложные переходы.</p>
+            
+          </div>
+        </li>
+<li class="card master" data-level="top" data-event="master_view" data-master-level="top" data-master-id="m3" tabindex="0">
+          <img src="img/master-3.webp" width="600" height="750" loading="lazy" alt="Мастер Илья Соколов, топ-барбер">
+          <div class="master__body">
+            <span class="badge badge--top">Топ-барбер</span>
+            <h3 class="card__title">Илья Соколов</h3>
+            <p class="card__text">Стаж 6 лет. Текстурный кроп, укладка.</p>
+            
+          </div>
+        </li>
+<li class="card master" data-level="top" data-event="master_view" data-master-level="top" data-master-id="m4" tabindex="0">
+          <img src="img/master-4.webp" width="600" height="750" loading="lazy" alt="Мастер Марат Ахмедов, топ-барбер">
+          <div class="master__body">
+            <span class="badge badge--top">Топ-барбер</span>
+            <h3 class="card__title">Марат Ахмедов</h3>
+            <p class="card__text">Стаж 5 лет. Борода и камуфляж седины.</p>
+            
+          </div>
+        </li>
+<li class="card master" data-level="barber" data-event="master_view" data-master-level="barber" data-master-id="m6" tabindex="0">
+          <img src="img/master-6.webp" width="600" height="750" loading="lazy" alt="Мастер Даниил Петров, барбер">
+          <div class="master__body">
+            <span class="badge badge--barber">Барбер</span>
+            <h3 class="card__title">Даниил Петров</h3>
+            <p class="card__text">Стаж 2 года. Фейды, короткие стрижки.</p>
+            
+          </div>
+        </li></ul>
+  </div>
+</section>
+
+<section class="section" id="works">
+  <div class="container">
+    <div class="section__head"><h2>Работы</h2><a class="link-more" href="works.html">Вся галерея</a></div>
+    <div class="chips" role="group" aria-label="Фильтр работ"><button type="button" class="chip is-active" data-filter="all" aria-pressed="true" data-event="works_filter" data-haircut-type="all">Все</button><button type="button" class="chip" data-filter="fade" aria-pressed="false" data-event="works_filter" data-haircut-type="fade">Фейд</button><button type="button" class="chip" data-filter="crop" aria-pressed="false" data-event="works_filter" data-haircut-type="crop">Кроп</button><button type="button" class="chip" data-filter="classic" aria-pressed="false" data-event="works_filter" data-haircut-type="classic">Классика</button><button type="button" class="chip" data-filter="beard" aria-pressed="false" data-event="works_filter" data-haircut-type="beard">Борода</button></div>
+    <ul class="gallery" data-gallery><li class="gallery__item" data-cat="fade"><figure><img src="img/work-01.webp" width="720" height="720" loading="lazy" alt="Скин-фейд — работа барбершопа «Фейд Клаб»"><figcaption>Скин-фейд<span>Фейд</span></figcaption></figure></li><li class="gallery__item" data-cat="fade"><figure><img src="img/work-02.webp" width="720" height="720" loading="lazy" alt="Мид-фейд — работа барбершопа «Фейд Клаб»"><figcaption>Мид-фейд<span>Фейд</span></figcaption></figure></li><li class="gallery__item" data-cat="crop"><figure><img src="img/work-07.webp" width="720" height="720" loading="lazy" alt="Французский кроп — работа барбершопа «Фейд Клаб»"><figcaption>Французский кроп<span>Кроп</span></figcaption></figure></li><li class="gallery__item" data-cat="crop"><figure><img src="img/work-08.webp" width="720" height="720" loading="lazy" alt="Текстурный кроп — работа барбершопа «Фейд Клаб»"><figcaption>Текстурный кроп<span>Кроп</span></figcaption></figure></li><li class="gallery__item" data-cat="classic"><figure><img src="img/work-13.webp" width="720" height="720" loading="lazy" alt="Классика с пробором — работа барбершопа «Фейд Клаб»"><figcaption>Классика с пробором<span>Классика</span></figcaption></figure></li><li class="gallery__item" data-cat="beard"><figure><img src="img/work-19.webp" width="720" height="720" loading="lazy" alt="Оформление бороды — работа барбершопа «Фейд Клаб»"><figcaption>Оформление бороды<span>Борода</span></figcaption></figure></li></ul>
+  </div>
+</section>
+
+<section class="section section--beige" id="gift">
+  <div class="container gift">
+    <img class="gift__img" src="img/gift.webp" width="800" height="500" loading="lazy" alt="Подарочный сертификат «Фейд Клаб»">
+    <div>
+      <h2>Подарочный сертификат</h2>
+      <p>Подарок к Новому году: сертификат на 2 000, 3 000 или 5 000 ₽. Действует 6 месяцев на любую услугу. Выберите номинал — оформим заявку.</p>
+      <div class="gift__amounts"><a class="btn btn--outline" href="contacts.html?service=gift_card&amp;amount=2000#booking" data-event="gift_card_click" data-gift-amount="2000" data-page-section="home_gift">2 000 ₽</a><a class="btn btn--outline" href="contacts.html?service=gift_card&amp;amount=3000#booking" data-event="gift_card_click" data-gift-amount="3000" data-page-section="home_gift">3 000 ₽</a><a class="btn btn--outline" href="contacts.html?service=gift_card&amp;amount=5000#booking" data-event="gift_card_click" data-gift-amount="5000" data-page-section="home_gift">5 000 ₽</a></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <a class="logo logo--footer" href="index.html"><svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="12" cy="30" r="5.5" fill="none" stroke="currentColor" stroke-width="2.6"/><circle cx="28" cy="30" r="5.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15.5 26 31 5M24.5 26 9 5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><span class="logo__text">ФЕЙД КЛАБ<small>барбершоп</small></span></a>
+      <p class="footer__muted">Мужские стрижки, борода и подарочные сертификаты. Ежедневно 10:00–22:00.</p>
+    </div>
+    <div>
+      <h2 class="footer__title">Адрес</h2>
+      <p>614 111, г. Новоозёрск, ул. Кузнечная, д. 5</p>
+      <p><a href="tel:+79009090990" data-event="contact_click" data-contact-type="phone">+7 (900) 909-09-90</a><br>
+      <a href="mailto:book@fadeclub.example" data-event="contact_click" data-contact-type="email">book@fadeclub.example</a></p>
+    </div>
+    <div>
+      <h2 class="footer__title">Мы в соцсетях</h2>
+      <div class="social"><a class="social__link" href="https://www.instagram.com/fade_club_barber/" target="_blank" rel="noopener" aria-label="Instagram" data-event="social_click" data-network="instagram" data-page-section="footer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg></a><a class="social__link" href="https://vk.com/fade_club_barber" target="_blank" rel="noopener" aria-label="ВКонтакте" data-event="social_click" data-network="vk" data-page-section="footer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 7h3.2c.5 2.6 1.8 5 3.3 5.6V7h3v3.2c1.3-.2 2.7-1.7 3.2-3.2h3c-.5 2-2 3.8-3.2 4.6 1.2.6 3 2.1 3.6 4.4h-3.3c-.6-1.6-1.9-2.8-3.3-3V17H11C6.3 17 3.6 13.8 3 7z"/></svg></a><a class="social__link" href="https://t.me/fade_club_barber" target="_blank" rel="noopener" aria-label="Telegram" data-event="social_click" data-network="telegram" data-page-section="footer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.5 4.3 2.9 11.5c-1 .4-1 1.6 0 1.9l4.6 1.4 1.8 5.4c.3.8 1.3 1 1.9.4l2.6-2.4 4.7 3.5c.7.5 1.7.1 1.9-.7l3-14.6c.2-1-.9-1.7-1.9-1.1zM9.6 14.3l8.5-6.8-6.8 7.8-.3 2.9z"/></svg></a><a class="social__link" href="https://www.youtube.com/@fade_club_barber" target="_blank" rel="noopener" aria-label="YouTube" data-event="social_click" data-network="youtube" data-page-section="footer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 8.2c-.2-1.6-1-2.7-2.6-2.9C16.9 5 12 5 12 5s-4.9 0-7.4.3C3 5.5 2.2 6.6 2 8.2 1.8 9.6 1.8 12 1.8 12s0 2.4.2 3.8c.2 1.6 1 2.7 2.6 2.9 2.5.3 7.4.3 7.4.3s4.9 0 7.4-.3c1.6-.2 2.4-1.3 2.6-2.9.2-1.4.2-3.8.2-3.8s0-2.4-.2-3.8zM10 15.2V8.8l5.4 3.2z"/></svg></a></div>
+      <p class="footer__muted"><a href="privacy.html">Политика конфиденциальности</a></p>
+    </div>
+  </div>
+  <div class="container footer__bottom">© 2026 ООО «Фейд Клаб». ИНН 9909087452</div>
+</footer>
+</body>
+</html>

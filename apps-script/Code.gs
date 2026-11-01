@@ -5,7 +5,7 @@
  * Перед первым запуском выполнить setupSheet() — создаст заголовки, проверки и подсветку.
  */
 
-var SPREADSHEET_ID = 'PASTE_SPREADSHEET_ID';   // id из адреса таблицы: /spreadsheets/d/<ID>/edit
+var SPREADSHEET_ID = '192vY4NM72ONFR1dw1VVXOqktPy1bSgq6Hi04JPIQhh4';   // id из адреса таблицы: /spreadsheets/d/<ID>/edit
 var SHEET_NAME = 'leads';
 
 var HEADERS = ['request_id', 'created_at', 'name', 'phone', 'email', 'service', 'master_level',
@@ -97,7 +97,12 @@ function doGet() {
 function setupSheet() {
   var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
   ss.setSpreadsheetTimeZone('Europe/Moscow');
-  var sheet = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
+  var sheet = ss.getSheetByName(SHEET_NAME);
+  if (!sheet) {
+    // В новой таблице первый лист пустой — переименовываем его в leads.
+    var first = ss.getSheets()[0];
+    sheet = first.getLastRow() === 0 ? first.setName(SHEET_NAME) : ss.insertSheet(SHEET_NAME);
+  }
   sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]).setFontWeight('bold');
   sheet.setFrozenRows(1);
 
@@ -130,6 +135,43 @@ function setupSheet() {
     .setRanges([sheet.getRange(2, 1, rows)])
     .build());
   sheet.setConditionalFormatRules(rules);
+  setupUtmSheet_(ss);
+}
+
+/** Лист utm — реестр ссылок (ТЗ, п. 5.2–5.3). Полная ссылка собирается формулой из столбцов меток. */
+var SITE_URL = 'https://tz-09-barbershop-feyd-klab.vercel.app/';
+var UTM_HEADERS = ['number', 'channel', 'placement', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content',
+                   'page', 'full_url', 'short_url', 'post_url', 'published_at'];
+var UTM_ROWS = [
+  ['U-01', 'Instagram', 'ссылка в шапке профиля', 'instagram', 'social', 'first_visit_nov_2026', 'bio', 'index.html'],
+  ['U-02', 'Instagram', 'автоответ под Reel (ManyChat)', 'instagram', 'social', 'first_visit_nov_2026', 'reel_fade_01', 'style-quiz.html'],
+  ['U-03', 'Instagram', 'автоответ, ветка «ПОДАРОК»', 'instagram', 'social', 'gift_dec_2026', 'reel_fade_01_gift', 'services.html#gift'],
+  ['U-04', 'Instagram', 'ссылка-стикер в Stories', 'instagram', 'social', 'first_visit_nov_2026', 'stories_01', 'contacts.html'],
+  ['U-05', 'ВКонтакте', 'пост в сообществе', 'vk', 'social', 'first_visit_nov_2026', 'post_01', 'works.html'],
+  ['U-06', 'ВКонтакте', 'кнопка действия «Записаться»', 'vk', 'social', 'first_visit_nov_2026', 'group_button', 'contacts.html'],
+  ['U-07', 'Telegram', 'пост в канале', 'telegram', 'social', 'first_visit_nov_2026', 'post_01', 'index.html'],
+  ['U-08', 'Telegram', 'пост о сертификатах', 'telegram', 'social', 'gift_dec_2026', 'post_02', 'services.html#gift'],
+  ['U-09', 'YouTube', 'описание Shorts «Фейд за 40 минут»', 'youtube', 'social', 'first_visit_nov_2026', 'shorts_01', 'masters.html'],
+  ['U-10', 'Блогер 1', 'ссылка у партнёра', 'blogger_nick_1', 'affiliate', 'first_visit_nov_2026', 'stories_01', 'index.html'],
+  ['U-11', 'Блогер 2', 'ссылка у партнёра', 'blogger_nick_2', 'affiliate', 'first_visit_nov_2026', 'post_01', 'style-quiz.html'],
+  ['U-12', 'Визитки', 'QR-код на визитке мастера', 'card_qr', 'qr', 'repeat_visit_2026', 'master_card', 'contacts.html']
+];
+
+function setupUtmSheet_(ss) {
+  var sheet = ss.getSheetByName('utm') || ss.insertSheet('utm');
+  sheet.getRange(1, 1, 1, UTM_HEADERS.length).setValues([UTM_HEADERS]).setFontWeight('bold');
+  sheet.setFrozenRows(1);
+  if (sheet.getLastRow() > 1) return;               // реестр уже заполнен — не трогаем
+  sheet.getRange(2, 1, UTM_ROWS.length, 8).setValues(UTM_ROWS);
+  var formulas = UTM_ROWS.map(function (r, i) {
+    var n = i + 2;
+    // страница без якоря + метки + якорь (#gift) в конце, если он есть
+    return ['=CONCATENATE("' + SITE_URL + '", REGEXEXTRACT(H' + n + ', "^[^#]*"), "?utm_source=", D' + n +
+            ', "&utm_medium=", E' + n + ', "&utm_campaign=", F' + n + ', "&utm_content=", G' + n +
+            ', IFERROR(REGEXEXTRACT(H' + n + ', "#.*"), ""))'];
+  });
+  sheet.getRange(2, 9, formulas.length, 1).setFormulas(formulas);
+  sheet.autoResizeColumns(1, 8);
 }
 
 function columnLetter_(n) {

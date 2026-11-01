@@ -4,7 +4,7 @@
 (function () {
   /* === НАСТРОЙКИ === */
   // Адрес веб-приложения Apps Script (Развернуть → Веб-приложение → URL, заканчивается на /exec).
-  var ENDPOINT = 'https://script.google.com/macros/s/PASTE_DEPLOYMENT_ID/exec';
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbwCd5c9u1UlvDHdieAXcrwijytIZp3OKdwBBFWaPLxn3PLh43UUoafIim3o2l67F13i/exec';
 
   var OPEN_HOUR = 10;           // первый слот 10:00
   var LAST_HOUR = 21;           // последний слот 21:00 (барбершоп работает до 22:00)

@@ -68,6 +68,10 @@
 |---|---|
 | ![](screens/utm/telegram-channel-u08.jpg) | ![](screens/utm/u-07-lead-in-table.png) |
 
+Адресная строка на телефоне после перехода из поста U-07 (Telegram → браузер):
+
+![](screens/utm/u-07-phone-address.jpg)
+
 ![Реестр ссылок](screens/sheets/utm.jpg)
 
 ### 6. Приём заявок — выполнено

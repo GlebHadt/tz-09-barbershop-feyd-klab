@@ -13,7 +13,7 @@
 | Таблица заявок «FadeClub — Bookings» (листы `leads`, `utm`) | https://docs.google.com/spreadsheets/d/192vY4NM72ONFR1dw1VVXOqktPy1bSgq6Hi04JPIQhh4/edit |
 | Приёмник заявок (Apps Script, веб-приложение) | https://script.google.com/macros/s/AKfycbwCd5c9u1UlvDHdieAXcrwijytIZp3OKdwBBFWaPLxn3PLh43UUoafIim3o2l67F13i/exec |
 | Отчёт PageSpeed Insights (Lighthouse, мобильный) | https://pagespeed.web.dev/analysis/https-tz-09-barbershop-feyd-klab-vercel-app/o25sdnhhhg?form_factor=mobile&hl=ru |
-| Telegram-канал | ___ |
+| Telegram-канал «Фейд Клаб — барбершоп» | https://t.me/fadeclub_barbershop (посты со ссылками: [U-07](https://t.me/fadeclub_barbershop/4), [U-08](https://t.me/fadeclub_barbershop/5)) |
 | Дашборд DataLens | не выполнен (см. «Не получилось») |
 
 **Ресурс GA4:** «ФЕЙД КЛАБ — сайт», идентификатор потока **G-H77TTNTSYH**
@@ -51,11 +51,22 @@
 
 ![Пользовательские параметры](screens/ga4/custom-definitions.jpg)
 
-### 5. UTM-разметка — Telegram и QR-код
+### 5. UTM-разметка и Telegram — выполнено по согласованному объёму
 
 - Реестр U-01…U-12 ведётся на листе `utm` таблицы. Полная ссылка собирается формулой из столбцов меток, выгрузка — `docs/utm.csv` (`screens/sheets/utm.jpg`).
+- Telegram-канал **«Фейд Клаб — барбершоп»** создан от имени компании: https://t.me/fadeclub_barbershop. Аватар и карточки к постам лежат в `docs/telegram-avatar.png` и `docs/telegram/`, тексты постов — в `docs/telegram-posts.md`.
+- Опубликованы 3 поста: приветствие и два поста со ссылками из реестра. Адрес поста и дата публикации внесены в реестр.
+
+| Строка | Пост | Ссылка ведёт на | Проверка переходом из поста |
+|---|---|---|---|
+| U-07 | [t.me/fadeclub_barbershop/4](https://t.me/fadeclub_barbershop/4) | `index.html?utm_source=telegram&utm_medium=social&utm_campaign=first_visit_nov_2026&utm_content=post_01` | все 4 метки в адресе; заявка «Тест U-07» записалась с метками `telegram / social / first_visit_nov_2026 / post_01` |
+| U-08 | [t.me/fadeclub_barbershop/5](https://t.me/fadeclub_barbershop/5) | `services.html?utm_source=telegram&utm_medium=social&utm_campaign=gift_dec_2026&utm_content=post_02#gift` | все 4 метки в адресе, якорь `#gift` после меток |
+
 - QR-код ссылки U-12 — `docs/qr-u-12.png`, афиша A4 — `docs/afisha.pdf`.
-- Посты для Telegram-канала со ссылками U-07 и U-08 — `docs/telegram-posts.md`.
+
+| Пост U-08 в канале | Заявка «Тест U-07» в таблице |
+|---|---|
+| ![](screens/utm/telegram-channel-u08.jpg) | ![](screens/utm/u-07-lead-in-table.png) |
 
 ![Реестр ссылок](screens/sheets/utm.jpg)
 
@@ -80,7 +91,7 @@
 
 | Раздел ТЗ | Решение |
 |---|---|
-| 5. Соцсети | Ссылки публикуются только в Telegram. Instagram, ВКонтакте, YouTube и блогеры-партнёры (U-01…U-06, U-09…U-11) не используются. |
+| 5. Соцсети | Ссылки публикуются только в Telegram (U-07, U-08) и на QR-коде (U-12). Instagram, ВКонтакте, YouTube и блогеры-партнёры (U-01…U-06, U-09…U-11) не используются. |
 | 7. Автоответы Instagram (ManyChat) | Не выполняется: Instagram недоступен. Страница `style-quiz.html`, на которую ведёт автоответ, готова. |
 | 8.4. Дашборд DataLens | Не выполняется: сервис не работает. |
 | Доступ Заказчику | Ссылка на таблицу и репозиторий вместо выдачи доступа по e-mail. |

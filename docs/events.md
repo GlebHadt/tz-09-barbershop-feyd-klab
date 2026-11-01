@@ -6,7 +6,7 @@
 |---|---|---|---|---|---|---|
 | 1 | `page_view` | авто | Открытие любой страницы | расширенная статистика GA4 (без кода) | page_location, page_title | https://…/index.html, «Фейд Клаб — барбершоп…» |
 | 2 | `scroll` | авто | Прокрутка до 90 % | расширенная статистика GA4 (без кода) | percent_scrolled | 90 |
-| 3 | `click` | авто | Переход на внешний сайт | расширенная статистика GA4 (без кода) | link_url, outbound | https://t.me/fade_club_barber, true |
+| 3 | `click` | авто | Переход на внешний сайт | расширенная статистика GA4 (без кода) | link_url, outbound | https://t.me/fadeclub_barbershop, true |
 | 4 | `file_download` | авто | Скачивание PDF | расширенная статистика GA4 (без кода) | file_name, file_extension | /files/fade-club-price.pdf, pdf |
 | 5 | `form_start` | авто | Первое взаимодействие с формой | расширенная статистика GA4 (без кода) | form_id | booking-form |
 | 6 | `form_submit` | авто | Отправка формы | расширенная статистика GA4 (без кода) | form_id | booking-form |

@@ -40,7 +40,7 @@
 
 Остальные страницы — в `screens/site/`. Отчёт Lighthouse — `screens/lighthouse/mobile.jpg`.
 
-### 4. Веб-аналитика GA4 — выполнено, кроме ключевых событий
+### 4. Веб-аналитика GA4 — выполнено
 
 - Ресурс «ФЕЙД КЛАБ — сайт», веб-поток с адресом Vercel, расширенная статистика включена, в том числе формы (`screens/ga4/stream.jpg`).
 - Тег `gtag.js` с G-H77TTNTSYH стоит в `<head>` всех 9 страниц.
@@ -48,8 +48,14 @@
 - `generate_lead` отправляется только после ответа приёмника `{"ok": true}`. Имя, телефон и e-mail в GA4 не передаются.
 - Созданы 7 пользовательских параметров уровня события: `button_name`, `page_section`, `service_name`, `master_level`, `weekday`, `lead_service`, `messenger` (`screens/ga4/custom-definitions.jpg`).
 - События `generate_lead`, `contact_click`, `messenger_click`, `slot_select`, `form_start` проверены в Realtime (`screens/ga4/realtime-generate_lead.jpg`).
+- Ключевые события: `generate_lead`, `contact_click`, `messenger_click` (`screens/ga4/key-events.jpg`). Стандартное `purchase` GA4 отметил сам, снять отметку нельзя — на сайте оно не отправляется.
+- В отчёте «Привлечение трафика» по источнику/каналу сеанса есть `telegram / social` — переход из Telegram-канала засчитан (`screens/ga4/traffic-acquisition-telegram.jpg`).
 
-![Пользовательские параметры](screens/ga4/custom-definitions.jpg)
+| Пользовательские параметры | Ключевые события |
+|---|---|
+| ![](screens/ga4/custom-definitions.jpg) | ![](screens/ga4/key-events.jpg) |
+
+![Привлечение трафика: telegram / social](screens/ga4/traffic-acquisition-telegram.jpg)
 
 ### 5. UTM-разметка и Telegram — выполнено по согласованному объёму
 

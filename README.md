@@ -68,6 +68,7 @@
 | U-07 | [t.me/fadeclub_barbershop/4](https://t.me/fadeclub_barbershop/4) | `index.html?utm_source=telegram&utm_medium=social&utm_campaign=first_visit_nov_2026&utm_content=post_01` | все 4 метки в адресе; заявка «Тест U-07» записалась с метками `telegram / social / first_visit_nov_2026 / post_01` |
 | U-08 | [t.me/fadeclub_barbershop/5](https://t.me/fadeclub_barbershop/5) | `services.html?utm_source=telegram&utm_medium=social&utm_campaign=gift_dec_2026&utm_content=post_02#gift` | все 4 метки в адресе, якорь `#gift` после меток |
 
+- Короткая ссылка для U-07: https://clck.ru/3WpPfH — после перехода в адресе сохраняются все 4 метки (проверено), записана в `docs/utm.csv` (столбец `short_url`).
 - QR-код ссылки U-12 — `docs/qr-u-12.png`, афиша A4 — `docs/afisha.pdf`.
 
 | Пост U-08 в канале | Заявка «Тест U-07» в таблице |
@@ -86,6 +87,8 @@
 - Приёмник `apps-script/Code.gs`, функция `doPost(e)`, опубликован как веб-приложение. Он сам проверяет обязательные поля, телефон, e-mail, списки и длину строк. Сам ставит `created_at` и `status = new`.
 - Повторная отправка с тем же `request_id` не создаёт строку: приёмник отвечает `{"ok": false, "error": "duplicate_request_id"}` (испытание И-05 проверено). Телефон «123» отклоняется с ошибкой `format:phone`.
 - Форма отправляется через `fetch` без перезагрузки. UTM-метки хранятся в `sessionStorage`, при ошибке поля отправляется `form_error`. Контрольная заявка с сайта дошла до таблицы.
+
+- Статусы (п. 6.4): заявка «Тест приёмника» проведена по всем статусам `new → confirmed → reminded → visited`, заявка «Тест U-07» — `new → confirmed → no_show` (`screens/sheets/statuses.png`).
 
 | Лист leads | Выполнения приёмника |
 |---|---|
@@ -106,6 +109,7 @@
 | Key events | `screens/reports/key-events.jpg` |
 | Tech — браузер и устройство | `screens/reports/tech.jpg` |
 | Атрибуция: на основе данных, 30 / 90 дней | `screens/reports/attribution.jpg` |
+| Explore «ФЕЙД КЛАБ · Воронка записи»: 5 шагов, закрытая и открытая, разбивка по типу устройства | `screens/explore/funnel-closed.jpg`, `screens/explore/funnel-open.jpg` |
 
 Главное из записки: за период 6 сеансов и 5 пользователей; заявок в таблице 3 и `generate_lead` в GA4 3 — расхождения нет. Больше всего посетителей теряется между первой страницей и кнопкой «Записаться» (дошли 2 из 5).
 
